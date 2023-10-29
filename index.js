@@ -14,7 +14,7 @@ function asyncMiddleware(fn) {
 
 const app = express();
 
-app.use(morgan('dev'))k
+app.use(morgan('dev'));
 app.use(express.json());
 
 app.use((_, res, next) => {
