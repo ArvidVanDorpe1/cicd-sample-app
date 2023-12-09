@@ -33,7 +33,7 @@ app.get('/animals/:id', asyncMiddleware(async (req, res) => {
 }));
 
 app.use((err, _, res, next) => {
-  res.status(Boom.isBoom(err) ? err.output.statusCode : 500)
+  res.status(Boom.isBoom(err) ? err.output.statusCode : 505)
     .json({
       error: err.message,
     });
